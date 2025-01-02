@@ -1,15 +1,17 @@
 .quick-transfer {
     width: 30vw;
+    background-color: #fff;
   
     .profile-carousel {
       display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
+      // overflow-x: auto;
+      // scroll-behavior: smooth;
+      justify-content: space-around;
     }
   
-    .profile {
-      margin-right: 1vw;
-    }
+    // .profile {
+    //   margin-right: 1vw;
+    // }
   
     .quick-card {
         display: flex;

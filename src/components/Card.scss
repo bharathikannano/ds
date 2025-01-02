@@ -11,6 +11,7 @@
   &.light {
     color: #343C6A;
     border: 1px solid #DFEAF2;
+    background-color: #fff;
     
     hr {
       background-color: #000;
@@ -21,8 +22,8 @@
   height: 20vh;
   border-radius: 15px;
   padding: 20px;
-  margin-top: 4vh;
-  font-family: 'Arial', sans-serif;
+  margin-top: 3.5vh;
+  font-family: "Arial", sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 1200px) {
@@ -210,6 +211,7 @@ hr {
     float: right;
     font-size: 1.5vh;
     font-weight: 600;
+    color:#343C6A;
 
     @media (max-width: 576px) {
       font-size: 2vh;
@@ -228,6 +230,7 @@ hr {
     float: left;
     font-size: 2vh;
     font-weight: 600;
+    color:#343C6A;
 
     @media (max-width: 576px) {
       font-size: 2.5vh;

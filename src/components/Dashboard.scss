@@ -1,12 +1,13 @@
 .weekly-activity,
 .expense-statistics {
-  flex: 1;
-  margin: 10px;
+  // flex: 1;
+  // margin: 10px;
 }
 
 .stats-section {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  // gap: 20px;
 }
 
 .cards-section,
@@ -33,27 +34,25 @@
 
 /* WeeklyActivityChart Container */
 .weekly-activity {
-  height: 300px; /* Fixed height for the chart */
-  width: 100%; /* Full width of the parent container */
-  padding: 10px;
-  background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 200px;
 }
 
 /* Canvas Defaults */
 canvas {
+  border-radius: 15px;
   display: block;
   max-width: 100%;
-  max-height: 100%; /* Ensure the chart scales properly */
+  max-height: 100%; 
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  width: 775px;
+  height: 387px;/* Ensure the chart scales properly */
 }
 
 
 .dashboard{
-  margin: 2vw;
+  margin: 1vw;
 }
 
 .Quick-balance-section{

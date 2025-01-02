@@ -79,8 +79,7 @@ const LineChartComponent = () => {
 
   const chartStyle = {
     width: '100%',
-    height: '300px',
-    padding: '20px',
+    height: '200px',
   };
 
   const containerStyle = {

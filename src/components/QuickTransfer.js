@@ -31,7 +31,7 @@ const QuickTransfer = () => {
 
   return (
     <div className="quick-transfer">
-      <div className="profile-carousel" ref={carouselRef} style={{ width: '30vw' }}>
+      <div className="profile-carousel" ref={carouselRef}>
         {profiles.slice(activeIndex, activeIndex + itemsPerPage).map((profile, index) => (
           <div key={index} className="profile">
             <div className="quick-card">

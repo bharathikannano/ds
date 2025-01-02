@@ -19,21 +19,22 @@ const Dashboard = () => {
 
       <div className="stats-section">
         <div className="weekly-activity">
+        <h3 className="pad-margin-zero">Weekly Activity</h3>
           <WeeklyActivityChart />
         </div>
         <div className="expense-statistics">
-          <h3>Expense Statistics</h3>
+          <h3 className="pad-margin-zero">Expense Statistics</h3>
           <ExpensePieChart />
         </div>
       </div>
       <div className="Quick-balance-section">
         <div className="transfer-section">
-          <h3>Quick Transfer</h3>
+          <h3 className="pad-margin-zero">Quick Transfer</h3>
           <QuickTransfer />
         </div>
 
         <div className="balance-history">
-          <h3>Balance History</h3>
+          <h3 className="pad-margin-zero">Balance History</h3>
           <BalanceHistoryChart />
         </div>
       </div>

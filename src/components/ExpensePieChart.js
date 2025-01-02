@@ -35,7 +35,7 @@ function ExpenseStatistics() {
           return `${label}\n${value}%`;
         },
         font: {
-          size: 10, // Increase the font size
+          size: 7, // Increase the font size
           weight: 'bold', // Make the font bold
         },
         align: 'start',
@@ -51,7 +51,7 @@ function ExpenseStatistics() {
   };
 
   return (
-    <div style={{ width: '300px', height: '300px' }}>
+    <div style={{ width: '325px', height: '200px' }}>
       <Pie data={data} options={options} />
     </div>
   );
