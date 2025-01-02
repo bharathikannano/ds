@@ -4,36 +4,48 @@
     padding: 10px;
    
     .amount-input {
-      flex: 1;
       display: flex;
       align-items: center;
       padding-left: 10px;
   
       span {
-        color: #666; /* Gray text color */
+        color: #666;
+        font-size: 12px;
+        position: absolute;
+        left: 10%;
+        bottom: 25px;
       }
   
       input {
+        position: absolute;
+        width: 5vw;
+        padding: 11px 18px;
         border: none;
-        font-size: 18px;
-        margin-left: 10px;
-        color: #666; /* Gray text color */
+        color: #666;
         border-radius: 20px;
-        background-color: #F0F0F0; /* Light gray background */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-      
+        background-color: #F0F0F0;
+        right: 25%;
+        bottom: 20px;
       }
     }
   
     .send-button {
-      background-color: #007bff;
+      position: absolute;
+      background-color: #000;
       color: white;
       border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
+      padding: 8px 15px;
+      border-radius: 25px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
+      right: 10%;
+      bottom: 20px;
+
+      svg{
+        height: 20px;
+        margin-left: 5px;
+      }
     }
   }

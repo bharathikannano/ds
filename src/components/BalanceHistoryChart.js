@@ -47,7 +47,11 @@ const LineChartComponent = () => {
     scales: {
       x: {
         grid: {
-          display: false,
+          color: 'lightgray',
+        },
+        border: {
+          dash: [2, 5], // Adjust dash and space lengths for lighter dots
+          color: 'lightgray' 
         },
       },
       y: {
@@ -58,7 +62,10 @@ const LineChartComponent = () => {
         },
         grid: {
           color: 'lightgray',
-          borderDash: [5, 5],
+        },
+        border: {
+          dash: [2, 5], // Adjust dash and space lengths for lighter dots
+          color: 'lightgray' 
         },
       },
     },
@@ -79,22 +86,13 @@ const LineChartComponent = () => {
 
   const chartStyle = {
     width: '100%',
-    height: '200px',
-  };
-
-  const containerStyle = {
-    backgroundColor: 'white',
-    borderRadius: '10px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    padding: '10px',
+    height: '185px',
   };
 
   return (
-    <div style={containerStyle}>
       <div style={chartStyle}>
         <Line options={chartOptions} data={chartData} />
       </div>
-    </div>
   );
 };
 

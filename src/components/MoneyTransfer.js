@@ -1,6 +1,8 @@
 import React from 'react';
 import { MdSend } from 'react-icons/md';
 import './MoneyTransfer.scss';
+import { PiTelegramLogo } from "react-icons/pi";
+
 const MoneyTransfer = () => {
   return (
     <div className="transfer-container">
@@ -10,7 +12,7 @@ const MoneyTransfer = () => {
       </div>
       <button className="send-button">
         <span>Send</span>
-        <MdSend size={24} />
+        <PiTelegramLogo size={24} />
       </button>
     </div>
   );

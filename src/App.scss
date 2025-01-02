@@ -14,3 +14,9 @@
     color: #343C6A;
   }
 }
+
+@media (max-width: 768px) {
+  .app {
+    display: block;
+  }
+}

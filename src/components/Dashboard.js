@@ -12,8 +12,10 @@ const Dashboard = () => {
     <div className="dashboard">
 
       <div className="cards-container">
-      <Card theam="dark"/>
-      <Card theam="light"/>
+        <div className="cards-header">
+          <Card theam="dark"/>
+          <Card theam="light"/>
+        </div>
       <RecentTransaction />
       </div>
 

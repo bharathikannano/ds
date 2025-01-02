@@ -7,6 +7,7 @@
 .stats-section {
   display: flex;
   justify-content: space-between;
+  padding-top: 1vh;
   // gap: 20px;
 }
 
@@ -36,6 +37,7 @@
 .weekly-activity {
   border-radius: 8px;
   height: 200px;
+  width: 730px;
 }
 
 /* Canvas Defaults */
@@ -47,16 +49,19 @@ canvas {
   box-sizing: border-box;
   background: rgb(255, 255, 255);
   width: 775px;
-  height: 387px;/* Ensure the chart scales properly */
+  height: 387px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
 .dashboard{
-  margin: 1vw;
+  margin: 2vh 3vw;
 }
 
 .Quick-balance-section{
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  padding-top: 1vh;
 }

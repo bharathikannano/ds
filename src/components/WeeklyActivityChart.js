@@ -12,8 +12,8 @@ const WeeklyActivityChart = () => {
       {
         label: 'Deposit',
         data: [250, 0, 250, 400, 150, 250, 350],
-        backgroundColor: '#4285F4',
-        borderColor: '#4285F4',
+        backgroundColor: '#396AFF',
+        borderColor: '#396AFF',
         borderWidth: 1,
         borderRadius: {
           topLeft: 10,
@@ -28,8 +28,8 @@ const WeeklyActivityChart = () => {
       {
         label: 'Withdraw',
         data: [500, 350, 300, 500, 150, 400, 400],
-        backgroundColor: '#333',
-        borderColor: '#333',
+        backgroundColor: '#232323',
+        borderColor: '#232323',
         borderWidth: 1,
         borderRadius: {
           topLeft: 10,
@@ -68,12 +68,26 @@ const WeeklyActivityChart = () => {
         grid: {
           display: false,
         },
+        ticks: {
+          display: true, // Keep x-axis labels
+          color:'#718EBF',
+        },
+        border: {
+          display: false, // Remove x-axis line
+        },
       },
       y: {
         grid: {
           display: true,
+          color:  '#F3F3F5',
         },
-        beginAtZero: true,
+        ticks: {
+          display: true, // Keep y-axis labels
+          color:'#718EBF',
+        },
+        border: {
+          display: false, // Remove y-axis line
+        },
       },
     },
   };

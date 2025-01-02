@@ -4,6 +4,7 @@ import profile1 from '../images/profile1.png';
 import profile2 from '../images/profile2.png';
 import profile3 from '../images/profile3.png';
 import profile4 from '../images/profile4.png';
+import { GrFormNext } from "react-icons/gr";
 
 import MoneyTransfer from './MoneyTransfer';
 
@@ -45,7 +46,7 @@ const QuickTransfer = () => {
         ))}
       </div>
       <button className="next-button" onClick={handleNext}>
-        Next
+      <GrFormNext />
       </button>
     <MoneyTransfer />
     </div>

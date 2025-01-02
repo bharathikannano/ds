@@ -2,20 +2,21 @@ import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import './ExpensePieChart.scss';
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
-function ExpenseStatistics() {
+const ExpensePieChart = () => {
   const data = {
-    labels: ['Entertainment', 'Bill Expense', 'Investment', 'Others'],
+    labels: ['Rent', 'Groceries', 'Utilities', 'Entertainment'],
     datasets: [
       {
         data: [30, 15, 20, 35],
         backgroundColor: ['#FC7900', '#396AFF', '#232323', '#343C6A'],
-        borderColor: '#fff', // Set border color to white
-        borderWidth: 10, // Set border width to create space between segments
-        hoverBackgroundColor: ['#FC7900', '#396AFF', '#232323', '#343C6A'], // Ensure colors remain bright on hover
-        hoverBorderColor: '#fff', // Ensure border color remains white on hover
+        borderColor: '#fff',
+        borderWidth: 10,
+        hoverBackgroundColor: ['#FC7900', '#396AFF', '#232323', '#343C6A'],
+        hoverBorderColor: '#fff',
       },
     ],
   };
@@ -23,38 +24,53 @@ function ExpenseStatistics() {
   const options = {
     plugins: {
       legend: {
-        display: false, // Hide the legend
+        display: false,
       },
       tooltip: {
-        enabled: false, // Disable the tooltip
+        enabled: true,
+        callbacks: {
+          label: function (tooltipItem) {
+            const label = tooltipItem.label || '';
+            const value = tooltipItem.raw || 0;
+            return `  ${value}%`; // Add a space before the label to prevent overlap
+          },
+        },
+        displayColors: true,
+        bodyAlign: 'center',
+        titleAlign: 'center',
       },
       datalabels: {
-        color: '#fff', // Ensure the text color is white
+        color: '#fff',
         formatter: (value, context) => {
           const label = context.chart.data.labels[context.dataIndex];
           return `${label}\n${value}%`;
         },
         font: {
-          size: 7, // Increase the font size
-          weight: 'bold', // Make the font bold
+          size: 10,
+          weight: 'bold',
         },
-        align: 'start',
-        anchor: 'end',
+        align: 'center',
+        anchor: 'center',
         offset: 5,
         padding: {
-          top: 5,
-          bottom: 5,
+          top: 0,
+          bottom: 0,
         },
         clip: false,
       },
     },
   };
 
+  const chartContainerStyle = {
+    width: '375px',
+    height: '200px',
+  };
+
   return (
-    <div style={{ width: '325px', height: '200px' }}>
+    <div className='expense-statistics' style={chartContainerStyle}>
       <Pie data={data} options={options} />
     </div>
   );
-}
+};
 
-export default ExpenseStatistics;
+export default ExpensePieChart;
