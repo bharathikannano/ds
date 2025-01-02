@@ -1,0 +1,34 @@
+.quick-transfer {
+    width: 30vw;
+  
+    .profile-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+  
+    .profile {
+      margin-right: 1vw;
+    }
+  
+    .quick-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+  
+      .card-content {
+        text-align: center;
+  
+        div {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }

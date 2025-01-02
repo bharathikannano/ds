@@ -1,0 +1,236 @@
+.container {
+  &.dark {
+    background: linear-gradient(135deg, #000000, #535254);
+    color: rgba(255, 255, 255, 0.7);
+    
+    hr {
+      background-color: #fff;
+    }
+  }
+
+  &.light {
+    color: #343C6A;
+    border: 1px solid #DFEAF2;
+    
+    hr {
+      background-color: #000;
+    }
+  }
+
+  width: 20vw;
+  height: 20vh;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 4vh;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 1200px) {
+    width: 25vw;
+    height: 25vh;
+  }
+
+  @media (max-width: 992px) {
+    width: 30vw;
+    height: 30vh;
+  }
+
+  @media (max-width: 768px) {
+    width: 40vw;
+    height: 35vh;
+  }
+
+  @media (max-width: 576px) {
+    width: 80vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.balance-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  .balance {
+    margin: 0;
+    font-size: 1.5vh;
+
+    @media (max-width: 576px) {
+      font-size: 2vh;
+    }
+  }
+
+  .amount {
+    margin: 0;
+    font-size: 1.5vh;
+
+    @media (max-width: 576px) {
+      font-size: 2vh;
+    }
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 30px;
+
+      @media (max-width: 576px) {
+        width: 40px;
+      }
+    }
+  }
+
+  .chip {
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: 576px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 3vh 0;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name-section {
+    margin: 0;
+
+    .card-label {
+      margin: 0;
+      font-size: 1.5vh;
+
+      @media (max-width: 576px) {
+        font-size: 2vh;
+      }
+    }
+
+    .name {
+      margin: 0;
+      font-size: 1.5vh;
+
+      @media (max-width: 576px) {
+        font-size: 2vh;
+      }
+    }
+  }
+
+  .valid-date {
+    text-align: right;
+
+    @media (max-width: 576px) {
+      text-align: center;
+    }
+
+    .date-label {
+      margin: 0;
+      font-size: 1.5vh;
+
+      @media (max-width: 576px) {
+        font-size: 2vh;
+      }
+    }
+
+    .date {
+      margin: 0;
+      font-size: 1.5vh;
+
+      @media (max-width: 576px) {
+        font-size: 2vh;
+      }
+    }
+  }
+}
+
+hr {
+  border: 0;
+  height: 1px;
+}
+
+.number-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-number {
+    margin: 1vh 0;
+    font-size: 2vh;
+    letter-spacing: 2px;
+
+    @media (max-width: 576px) {
+      font-size: 2.5vh;
+    }
+  }
+}
+
+.cards-container {
+  position: relative;
+  display: flex;
+  gap: 5vw;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .header-label {
+    float: right;
+    font-size: 1.5vh;
+    font-weight: 600;
+
+    @media (max-width: 576px) {
+      font-size: 2vh;
+    }
+  }
+}
+
+.card-list {
+  position: relative;
+
+  @media (max-width: 576px) {
+    align-items: center;
+  }
+
+  .header-my-cards {
+    float: left;
+    font-size: 2vh;
+    font-weight: 600;
+
+    @media (max-width: 576px) {
+      font-size: 2.5vh;
+    }
+  }
+}

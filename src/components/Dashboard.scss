@@ -1,0 +1,63 @@
+.weekly-activity,
+.expense-statistics {
+  flex: 1;
+  margin: 10px;
+}
+
+.stats-section {
+  display: flex;
+  gap: 20px;
+}
+
+.cards-section,
+.transactions-section,
+.transfer-section,
+.balance-history {
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #34495e;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.card p {
+  margin: 0;
+}
+
+/* WeeklyActivityChart Container */
+.weekly-activity {
+  height: 300px; /* Fixed height for the chart */
+  width: 100%; /* Full width of the parent container */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Canvas Defaults */
+canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 100%; /* Ensure the chart scales properly */
+}
+
+
+.dashboard{
+  margin: 2vw;
+}
+
+.Quick-balance-section{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
