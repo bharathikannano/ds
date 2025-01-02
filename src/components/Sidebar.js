@@ -1,52 +1,41 @@
-import React, { useState } from 'react';
-import { AiFillHome } from "react-icons/ai";
-import { FaMoneyBillTransfer } from "react-icons/fa6";
-import { MdManageAccounts } from "react-icons/md";
-import { GrMoney } from "react-icons/gr";
-import { ImCreditCard } from "react-icons/im";
-import { GiReceiveMoney, GiAutoRepair } from "react-icons/gi";
-import { VscLightbulbSparkle } from "react-icons/vsc";
-import { SlSettings } from "react-icons/sl";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { AiFillHome } from 'react-icons/ai';
+import { FaMoneyBillTransfer } from 'react-icons/fa6';
+import { MdManageAccounts } from 'react-icons/md';
+import { GrMoney } from 'react-icons/gr';
+import { ImCreditCard } from 'react-icons/im';
+import { GiReceiveMoney, GiAutoRepair } from 'react-icons/gi';
+import { VscLightbulbSparkle } from 'react-icons/vsc';
+import { SlSettings } from 'react-icons/sl';
 import './Sidebar.scss';
 
-const Sidebar = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleItemClick = (index) => {
-    setActiveIndex(index);
-  };
+const Sidebar = ({ activeIndex, handleItemClick }) => {
+  const menuItems = [
+    { index: 0, to: "/", icon: <AiFillHome />, label: "Dashboard" },
+    { index: 1, to: "/transactions", icon: <FaMoneyBillTransfer />, label: "Transactions" },
+    { index: 2, to: "/accounts", icon: <MdManageAccounts />, label: "Accounts" },
+    { index: 3, to: "/investments", icon: <GrMoney />, label: "Investments" },
+    { index: 4, to: "/credit-cards", icon: <ImCreditCard />, label: "Credit Cards" },
+    { index: 5, to: "/loans", icon: <GiReceiveMoney />, label: "Loans" },
+    { index: 6, to: "/services", icon: <GiAutoRepair />, label: "Services" },
+    { index: 7, to: "/privileges", icon: <VscLightbulbSparkle />, label: "My Privileges" },
+    { index: 8, to: "/settings", icon: <SlSettings />, label: "Setting" },
+  ];
 
   return (
     <div className="sidebar">
       <h2>Soar Task</h2>
       <ul>
-        <li className={activeIndex === 0 ? 'active' : ''} onClick={() => handleItemClick(0)}>
-          <AiFillHome /> Dashboard
-        </li>
-        <li className={activeIndex === 1 ? 'active' : ''} onClick={() => handleItemClick(1)}>
-          <FaMoneyBillTransfer /> Transactions
-        </li>
-        <li className={activeIndex === 2 ? 'active' : ''} onClick={() => handleItemClick(2)}>
-          <MdManageAccounts /> Accounts
-        </li>
-        <li className={activeIndex === 3 ? 'active' : ''} onClick={() => handleItemClick(3)}>
-          <GrMoney /> Investments
-        </li>
-        <li className={activeIndex === 4 ? 'active' : ''} onClick={() => handleItemClick(4)}>
-          <ImCreditCard /> Credit Cards
-        </li>
-        <li className={activeIndex === 5 ? 'active' : ''} onClick={() => handleItemClick(5)}>
-          <GiReceiveMoney /> Loans
-        </li>
-        <li className={activeIndex === 6 ? 'active' : ''} onClick={() => handleItemClick(6)}>
-          <GiAutoRepair /> Services
-        </li>
-        <li className={activeIndex === 7 ? 'active' : ''} onClick={() => handleItemClick(7)}>
-          <VscLightbulbSparkle /> My Privileges
-        </li>
-        <li className={activeIndex === 8 ? 'active' : ''} onClick={() => handleItemClick(8)}>
-          <SlSettings /> Setting
-        </li>
+        {menuItems.map((item) => (
+           <Link to={item.to} onClick={() => handleItemClick(item.index)}>
+          <li
+            key={item.index}
+            className={activeIndex === item.index ? 'active' : ''}>
+              {item.icon} {item.label}
+          </li>
+          </Link>
+        ))}
       </ul>
     </div>
   );

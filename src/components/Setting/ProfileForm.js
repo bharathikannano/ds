@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./ProfileForm.scss";
+import user from '../../images/user.png';
+import { FaPencil } from "react-icons/fa6";
+
 
 const ProfileForm = () => {
   const [profileImage, setProfileImage] = useState(null);
@@ -25,13 +28,13 @@ const ProfileForm = () => {
       <form className="profile-form" onSubmit={handleSubmit}>
         <div className="profile-image-section">
           <img
-            src={profileImage || "https://via.placeholder.com/100"}
+            src={profileImage || user}
             alt="Profile"
             className="profile-image"
           />
           <label htmlFor="upload" className="edit-profile-image">
             <span role="img" aria-label="edit">
-              ✏️
+              <FaPencil />
             </span>
           </label>
           <input
