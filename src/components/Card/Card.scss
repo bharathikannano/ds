@@ -1,53 +1,33 @@
 .card-list {
-  &.dark {
-    background: linear-gradient(135deg, #000000, #535254);
-    color: rgba(255, 255, 255, 0.7);
-    
+    &.dark {
+      --bg-color: linear-gradient(135deg, #000000, #535254);
+      --text-color: #fff;
+      --hr-color: #fff;
+    }
+  
+    &.light {
+      --bg-color: #fff;
+      --text-color: #343C6A;
+      --hr-color: #000;
+      border: 1px solid #DFEAF2;
+    }
+  
+    background: var(--bg-color);
+    color: var(--text-color);
+  
     hr {
-      background-color: #fff;
+      background-color: var(--hr-color);
+    }
+  
+    .balance-container,
+    .number-section,
+    .name,
+    .date {
+      color: var(--text-color);
     }
 
-    .balance-container {
-      color: #fff;
-    }
-    .number-section{
-      color: #fff;
-    }
-    .name{
-      color: #fff;
-    }
-    .date{
-      color: #fff;
-    }
-  }
-
-  &.light {
-    color: #343C6A;
-    border: 1px solid #DFEAF2;
-    background-color: #fff;
-    
-    hr {
-      background-color: #000;
-    }
-    .balance-container {
-      color: #343C6A;
-    }
-    .number-section{
-      color: #343C6A;
-    }
-    .name{
-      color: #343C6A;
-    }
-    .date{
-      color: #343C6A;
-    }
-  }
-
-  // width: 20vw;
-  // height: 18vh;
   border-radius: 15px;
   padding: 1em;
-  // margin-top: 3.5vh;
   font-family: "Arial", sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -69,9 +49,6 @@
   @media (max-width: 576px) {
     width: 90vw;
     height: auto;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
   }
 }
 
