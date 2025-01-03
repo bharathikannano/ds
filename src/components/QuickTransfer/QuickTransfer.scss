@@ -33,7 +33,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 30px 15px;
+      padding: 30px 5px;
   
       img {
         width: 50px;
@@ -58,6 +58,12 @@
   }
   //mobile and tablet
   @media (max-width: 1024px) {
+    .quick-transfer {
+      width: auto;
+    }
+  }
+  //large screen
+  @media (min-width: 1024px) {
     .quick-transfer {
       width: auto;
     }

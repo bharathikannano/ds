@@ -34,7 +34,7 @@
   //mobile and tablet
   @media (max-width: 1024px) {
     .balance-history{
-      width: 64vw;
+      width: calc(100vw - 36vw);
     }
   }
   //only mobile screen
