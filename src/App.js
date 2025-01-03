@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
-import Dashboard from "./components/Dashboard";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Header from "./components/Header/Header";
+import Dashboard from "./components/Dashboard/Dashboard";
 import SettingComponent from "./components/Setting/Setting";
-import NotFound from "./components/NotFound";
+import NotFound from "./components/Shared/NotFound/NotFound";
 import "./App.scss";
 
 const App = () => {

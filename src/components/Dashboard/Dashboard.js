@@ -1,11 +1,11 @@
 import React from "react";
-import WeeklyActivityChart from "./WeeklyActivityChart";
-import ExpensePieChart from "./ExpensePieChart";
+import WeeklyActivityChart from "../WeeklyActivityChart/WeeklyActivityChart";
+import ExpensePieChart from "../ExpensePieChart/ExpensePieChart";
 import "./Dashboard.scss";
-import Card from "./Card";
-import RecentTransaction from './RecentTransaction';
-import QuickTransfer from "./QuickTransfer";
-import BalanceHistoryChart from "./BalanceHistoryChart";
+import Card from "../Card/Card";
+import RecentTransaction from '../RecentTransaction/RecentTransaction';
+import QuickTransfer from "../QuickTransfer/QuickTransfer";
+import BalanceHistoryChart from "../BalanceHistoryChart/BalanceHistoryChart";
 
 const Dashboard = () => {
   return (

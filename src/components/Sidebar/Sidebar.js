@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import menuItems from './menuItems'; //Import menuItems
+import menuItems from '../Shared/menuItems/menuItems'; //Import menuItems
 import './Sidebar.scss';
 
 const Sidebar = ({ activeIndex, handleItemClick }) => {

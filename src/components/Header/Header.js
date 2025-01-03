@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { IoIosSearch } from "react-icons/io";
 import { SlSettings } from "react-icons/sl";
 import { LuBellDot } from "react-icons/lu";
-import user from '../images/user.png';
-import menuItems from './menuItems'; // Import menuItems
+import user from '../../images/user.png';
+import menuItems from '../Shared/menuItems/menuItems'; // Import menuItems
 
 
 function Header({ activeIndex, handleItemClick }) {

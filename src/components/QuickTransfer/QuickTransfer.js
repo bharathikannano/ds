@@ -1,12 +1,12 @@
 import React, { useState, useRef } from 'react';
 import './QuickTransfer.scss';
-import profile1 from '../images/profile1.png';
-import profile2 from '../images/profile2.png';
-import profile3 from '../images/profile3.png';
-import profile4 from '../images/profile4.png';
+import profile1 from '../../images/profile1.png';
+import profile2 from '../../images/profile2.png';
+import profile3 from '../../images/profile3.png';
+import profile4 from '../../images/profile4.png';
 import { GrFormNext } from "react-icons/gr";
 
-import MoneyTransfer from './MoneyTransfer';
+import MoneyTransfer from '../MoneyTransfer/MoneyTransfer';
 
 const QuickTransfer = () => {
   const [activeIndex, setActiveIndex] = useState(0);

@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../images/logo.png';
-import chip from '../images/chip.png';
-import logo_gray from '../images/logo_gray.png';
-import chip_gray from '../images/chip_gray.png';
+import logo from '../../images/logo.png';
+import chip from '../../images/chip.png';
+import logo_gray from '../../images/logo_gray.png';
+import chip_gray from '../../images/chip_gray.png';
 import './Card.scss';
 const Card = ({theam}) => {
   return (
