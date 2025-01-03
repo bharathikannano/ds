@@ -38,7 +38,7 @@
       // tablet screen
       @media (max-width: 768px) {
         input {
-          width: 20vw;
+          width: 150px;
           right: 10%;
         }
       }
@@ -47,6 +47,13 @@
         input {
           width: 35vw;
           right: 10%;
+        }
+      }
+      // large screen
+      @media (min-width: 1025px) {
+        input {
+          width: 90px;
+          right: 20%;
         }
       }
     }
