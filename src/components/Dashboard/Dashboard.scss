@@ -34,6 +34,12 @@
   //mobile and tablet
   @media (max-width: 1024px) {
     .balance-history{
+      width: 64vw;
+    }
+  }
+  //only mobile screen
+  @media (max-width: 480px) {
+    .balance-history{
       width: auto;
     }
   }

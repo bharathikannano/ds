@@ -44,6 +44,10 @@
   
       .card-content {
         text-align: center;
+
+        & div:first-child {
+        font-weight: 600;
+        }
   
         div {
           // margin-bottom: 0.5rem;

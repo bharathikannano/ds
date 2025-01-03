@@ -1,5 +1,4 @@
 import React from 'react';
-import { MdSend } from 'react-icons/md';
 import './MoneyTransfer.scss';
 import { PiTelegramLogo } from "react-icons/pi";
 

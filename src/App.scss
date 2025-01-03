@@ -20,3 +20,11 @@
     display: block;
   }
 }
+
+// grater than 1024px
+@media (min-width: 1024px) {
+  .main-content {
+    flex: none;
+    background-color: #F5F7FA;
+  }
+}
