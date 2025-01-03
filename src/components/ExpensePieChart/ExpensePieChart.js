@@ -30,7 +30,7 @@ const ExpensePieChart = () => {
         enabled: true,
         callbacks: {
           label: function (tooltipItem) {
-            const label = tooltipItem.label || '';
+            // const label = tooltipItem.label || '';
             const value = tooltipItem.raw || 0;
             return `  ${value}%`; // Add a space before the label to prevent overlap
           },
@@ -42,7 +42,7 @@ const ExpensePieChart = () => {
       datalabels: {
         color: '#fff',
         formatter: (value, context) => {
-          const label = context.chart.data.labels[context.dataIndex];
+          // const label = context.chart.data.labels[context.dataIndex];
           // return `${label}\n${value}%`;
           return `  ${value}%`;
         },

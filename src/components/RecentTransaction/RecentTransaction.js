@@ -1,6 +1,6 @@
 import React from 'react';
 import './RecentTransaction.scss'; // Import the CSS file for styling
-import { color } from 'chart.js/helpers';
+// import { color } from 'chart.js/helpers';
 import { RiExchangeDollarFill } from "react-icons/ri";
 import { CiCreditCard1 } from "react-icons/ci";
 import { SlPaypal } from "react-icons/sl";
