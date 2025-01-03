@@ -6,10 +6,10 @@ import chip_gray from '../../images/chip_gray.png';
 import './Card.scss';
 const Card = ({theam}) => {
   return (
-    <div className='card-list'>
-        {theam === 'dark' ? <div className='header-my-cards'>My Cards</div> : <div className='header-label'>See All</div> }
+    <div className={`card-list ${theam}`}>
+        {/* {theam === 'dark' ? <div className='header-my-cards'>My Cards</div> : <div className='header-label'>See All</div> } */}
         
-        <div className={`container ${theam}`}>
+        {/* <div className={`container ${theam}`}> */}
             <header>
                 <sapan className="balance-container">
                     <p className='balance'>Balance</p>
@@ -34,7 +34,7 @@ const Card = ({theam}) => {
                     <img src={theam !== 'dark' ? logo_gray : logo} alt="" />
                 </span>
             </div>
-        </div>
+        {/* </div> */}
     </div>
   );
 };

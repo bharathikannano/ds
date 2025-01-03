@@ -1,10 +1,23 @@
-.container {
+.card-list {
   &.dark {
     background: linear-gradient(135deg, #000000, #535254);
     color: rgba(255, 255, 255, 0.7);
     
     hr {
       background-color: #fff;
+    }
+
+    .balance-container {
+      color: #fff;
+    }
+    .number-section{
+      color: #fff;
+    }
+    .name{
+      color: #fff;
+    }
+    .date{
+      color: #fff;
     }
   }
 
@@ -16,13 +29,25 @@
     hr {
       background-color: #000;
     }
+    .balance-container {
+      color: #343C6A;
+    }
+    .number-section{
+      color: #343C6A;
+    }
+    .name{
+      color: #343C6A;
+    }
+    .date{
+      color: #343C6A;
+    }
   }
 
-  width: 20vw;
-  height: 18vh;
+  // width: 20vw;
+  // height: 18vh;
   border-radius: 15px;
-  padding: 20px;
-  margin-top: 3.5vh;
+  padding: 1em;
+  // margin-top: 3.5vh;
   font-family: "Arial", sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -37,16 +62,16 @@
   }
 
   @media (max-width: 768px) {
-    width: 40vw;
-    height: 35vh;
+    width: 90vw;
+    height: auto;
   }
 
   @media (max-width: 576px) {
-    width: 80vw;
+    width: 90vw;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
   }
 }
 
@@ -59,19 +84,19 @@
 
   .balance {
     margin: 0;
-    font-size: 1.5vh;
+    font-size: 12px;
 
     @media (max-width: 576px) {
-      font-size: 2vh;
+      font-size: 12px;
     }
   }
 
   .amount {
     margin: 0;
-    font-size: 1.5vh;
+    font-size: 20px;
 
     @media (max-width: 576px) {
-      font-size: 2vh;
+      font-size: 20px;
     }
   }
 }
@@ -82,7 +107,7 @@ header {
   align-items: center;
 
   @media (max-width: 576px) {
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
   }
 
@@ -117,8 +142,8 @@ header {
   margin: 2vh 0;
 
   @media (max-width: 576px) {
-    flex-direction: column;
     align-items: center;
+    margin: 3vh 0;
   }
 
   .name-section {
@@ -126,19 +151,19 @@ header {
 
     .card-label {
       margin: 0;
-      font-size: 1.5vh;
+      font-size: 12px;
 
       @media (max-width: 576px) {
-        font-size: 2vh;
+        font-size: 12px;
       }
     }
 
     .name {
       margin: 0;
-      font-size: 1.5vh;
+      font-size: 15px;
 
       @media (max-width: 576px) {
-        font-size: 2vh;
+        font-size: 15px;
       }
     }
   }
@@ -152,19 +177,19 @@ header {
 
     .date-label {
       margin: 0;
-      font-size: 1.5vh;
+      font-size: 12px;
 
       @media (max-width: 576px) {
-        font-size: 2vh;
+        font-size: 12px;
       }
     }
 
     .date {
       margin: 0;
-      font-size: 1.5vh;
+      font-size: 15px;
 
       @media (max-width: 576px) {
-        font-size: 2vh;
+        font-size: 15px;
       }
     }
   }
@@ -182,17 +207,17 @@ hr {
   margin-top: 15px;
 
   @media (max-width: 576px) {
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
   }
 
   .card-number {
     margin: 1vh 0;
-    font-size: 1.5vh;
+    font-size: 16px;
     letter-spacing: 2px;
 
     @media (max-width: 576px) {
-      font-size: 2.5vh;
+      font-size: 16px;
     }
   }
 }
@@ -212,17 +237,6 @@ hr {
     flex-direction: column;
     align-items: center;
     gap: 2vh;
-  }
-
-  .header-label {
-    float: right;
-    font-size: 1.5vh;
-    font-weight: 600;
-    color:#343C6A;
-
-    @media (max-width: 576px) {
-      font-size: 2vh;
-    }
   }
 }
 

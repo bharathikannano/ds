@@ -52,7 +52,9 @@ function Header({ activeIndex, handleItemClick }) {
             />
           </div>
           <button className="settings-button">
+          <Link to={menuItems[menuItems.length - 1].to} onClick={() => handleLinkClick(menuItems[menuItems.length - 1].index)}>
             <SlSettings />
+          </Link>
           </button>
           <button className="notifications-button">
             <LuBellDot />

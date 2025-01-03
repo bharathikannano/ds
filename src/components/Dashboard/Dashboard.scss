@@ -1,67 +1,122 @@
-.weekly-activity,
-.expense-statistics {
-  // flex: 1;
-  // margin: 10px;
+/* Dashboard Container */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 0.8rem;
+  background-color: #f9f9f9;
+
+  .expense-pie-chart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .expense-statistics{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .weekly-activity-chart{
+    display: flex;
+    align-items: center;
+    height: 24vh;
+    flex-grow: 1;
+
+    canvas{
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+  .balance-history{
+    width: 55vw;
+  }
+  //mobile and tablet
+  @media (max-width: 1024px) {
+    .balance-history{
+      width: auto;
+    }
+  }
 }
 
-.stats-section {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1vh;
-  // gap: 20px;
-}
-
-.cards-section,
-.transactions-section,
-.transfer-section,
-.balance-history {
-  margin-bottom: 20px;
-}
-
-.card {
-  background: #34495e;
-  color: white;
-  padding: 15px;
-  border-radius: 8px;
+/* Section Styles */
+.section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  min-width: 200px;
 }
 
-.card p {
-  margin: 0;
+.section-heading {
+  margin-top: 0;
+  margin-left: 0.25rem;
+  font-size: 1rem;
+  color: #343C6A;
+  margin-bottom: 0.5rem;
 }
 
-/* WeeklyActivityChart Container */
-.weekly-activity {
+.text-right {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #343C6A;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+/* Card Styles */
+.card {
+  background: #fff;
+  padding: 1rem;
   border-radius: 8px;
-  height: 200px;
-  width: 730px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Canvas Defaults */
-canvas {
-  border-radius: 15px;
-  display: block;
-  max-width: 100%;
-  max-height: 100%; 
-  box-sizing: border-box;
-  background: rgb(255, 255, 255);
-  width: 775px;
-  height: 387px;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.dashboard{
-  margin: 2vh 3vw;
-}
-
-.Quick-balance-section{
+/* Transaction Styles */
+.transaction {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  padding-top: 1vh;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Weekly Activity Card - Span 2 Columns on Large Screens */
+.weekly-activity {
+  grid-column: span 2;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .weekly-activity {
+    grid-column: span 1;
+  }
+  .card-all{
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Chart Placeholder Styles */
+.chart,
+.line-chart {
+  height: 150px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Pie Chart Placeholder */
+.pie-chart {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4caf50 0% 30%,
+    #ff9800 30% 45%,
+    #2196f3 45% 65%,
+    #ccc 65% 100%
+  );
 }

@@ -27,8 +27,15 @@
         right: 25%;
         bottom: 20px;
       }
+
+      //mobile and tablet
+      @media (max-width: 1024px) {
+        input {
+          width: 20vw;
+          right: 35%;
+        }
+      }
     }
-  
     .send-button {
       position: absolute;
       background-color: #000;
@@ -46,6 +53,10 @@
       svg{
         height: 20px;
         margin-left: 5px;
+      }
+      //mobile and tablet
+      @media (max-width: 1024px) {
+        right: 25%;
       }
     }
   }

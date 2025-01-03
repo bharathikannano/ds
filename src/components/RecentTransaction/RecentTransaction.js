@@ -35,9 +35,9 @@ const transactions = [
 
 function RecentTransaction() {
   return (
-    <div className="recent-transaction-container">
-      <h2>Recent Transaction</h2>
-      <ul>
+    // <div className="recent-transaction-container">
+    //   <h2>Recent Transaction</h2>
+      <ul className="recent-transaction-card">
         {transactions.map((transaction, index) => (
           <li key={index} className="transaction-item">
             <div className="icon-container" style={{ backgroundColor: transaction.color }}>
@@ -53,7 +53,7 @@ function RecentTransaction() {
           </li>
         ))}
       </ul>
-    </div>
+    // </div>
   );
 }
 

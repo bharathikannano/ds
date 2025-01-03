@@ -35,7 +35,7 @@ const ExpensePieChart = () => {
             return `  ${value}%`; // Add a space before the label to prevent overlap
           },
         },
-        displayColors: true,
+        displayColors: false,
         bodyAlign: 'center',
         titleAlign: 'center',
       },
@@ -43,7 +43,8 @@ const ExpensePieChart = () => {
         color: '#fff',
         formatter: (value, context) => {
           const label = context.chart.data.labels[context.dataIndex];
-          return `${label}\n${value}%`;
+          // return `${label}\n${value}%`;
+          return `  ${value}%`;
         },
         font: {
           size: 10,
