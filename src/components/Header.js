@@ -1,22 +1,43 @@
-import React, { useState } from 'react';
-import './Header.scss'; 
+import React, { useState, useRef } from 'react';
+import './Header.scss';
+import { Link } from 'react-router-dom';
 import { IoIosSearch } from "react-icons/io";
 import { SlSettings } from "react-icons/sl";
 import { LuBellDot } from "react-icons/lu";
 import user from '../images/user.png';
-import { FaBars } from "react-icons/fa"; 
+import menuItems from './menuItems'; // Import menuItems
 
-function Header() {
+
+function Header({ activeIndex, handleItemClick }) {
   const [searchTerm, setSearchTerm] = useState('');
+  const menuToggleRef = useRef(null);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
+  const handleLinkClick = (index) => {
+    handleItemClick(index);
+    if (menuToggleRef.current) {
+      menuToggleRef.current.checked = false; // Uncheck the checkbox
+    }
+  };
+
   return (
     <div className="app-container">
       <div className="app-header">
-      <input type="checkbox" role="button" aria-label="Display the menu" className="menu" />
+        <input type="checkbox" id="menuToggle" ref={menuToggleRef} role="button" aria-label="Display the menu" className="menu" />
+        <nav className="nav-menu">
+        <ul>
+        {menuItems.map((item) => (
+          <Link to={item.to} onClick={() => handleLinkClick(item.index)}>
+            <li key={item.index} className={activeIndex === item.index ? 'active' : ''}>
+              {item.icon} {item.label}
+            </li>
+          </Link>
+        ))}
+      </ul>
+        </nav>
         <div className="overview-section">
           <span className="overview-text">Overview</span>
         </div>
@@ -37,7 +58,7 @@ function Header() {
             <LuBellDot />
           </button>
           <div className="user-profile">
-            <img src={user} alt="User Profile" /> 
+            <img src={user} alt="User Profile" />
           </div>
         </div>
       </div>

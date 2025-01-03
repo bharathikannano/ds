@@ -19,7 +19,7 @@ const App = () => {
       <div className="app">
         <Sidebar activeIndex={activeIndex} handleItemClick={handleItemClick} />
         <div className="main-content">
-          <Header />
+          <Header activeIndex={activeIndex} handleItemClick={handleItemClick} />
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/settings" element={<SettingComponent />} />

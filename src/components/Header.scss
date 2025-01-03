@@ -2,12 +2,7 @@
 
 .app-container {
   width: 100%;
-  // max-width: 1200px;
   margin: 0 auto;
-
-  // @media (max-width: 768px) {
-  //   padding: 10px;
-  // }
 }
 
 .app-header {
@@ -18,6 +13,60 @@
   border-radius: 5px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; 
+
+.menu {
+  display: none; /*Initially hide menu on larger screen*/
+  cursor: pointer;
+  margin-right: 10px;
+  /*Existing hamburger icon styles remain*/
+}
+
+.menu-label {
+  display: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.nav-menu {
+  display: flex; /* Initially show the nav menu */
+  flex-direction: column; /* Stack items vertically */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  width: 50%;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none;
+}
+
+.menu:checked ~ .nav-menu {
+  display: block; /* Show nav-menu when checkbox is checked */
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+
+  svg{
+    margin-right: 3vw;
+  }
+}
+
+.nav-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
 }
 
 .logo-container {
@@ -177,8 +226,17 @@
   outline-offset: 5px;
 }
 
-  @media (min-width: 768px) {
+@media (max-width: 768px) {
+  .app-header {
     .menu {
+      display: block;
+
+      &:checked ~ .nav-menu {
+        display: block; /* Show nav-menu when checkbox is checked */
+      }
+    }
+    .nav-menu{
       display: none;
     }
   }
+}
