@@ -5,7 +5,7 @@ This project displays a dashboard with charts.  Built with Create React App.
 
 ## Getting Started
 
-1.  **Clone:** `git clone <repository_url>`
+1.  **Clone:** `git clone https://github.com/bharathikannano/ds.git`
 2.  **Install:** `npm install`
 3.  **Run:** `npm start`
 
