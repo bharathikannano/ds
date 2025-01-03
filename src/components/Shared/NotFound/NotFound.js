@@ -13,7 +13,7 @@ const NotFound = () => {
         <div className="hard-hat"><FaHardHat /></div>
       </div>
       <h2>404 - Page Not Found</h2>
-      <p className="message"><a ref='noreferrer' href="https://bharathikannano.github.io/gitPholio/" target='_blank'>Bharathikannan </a>is waiting for the mock to build this page. Please check back later!</p>
+      <p className="message"><a rel="noopener noreferrer" href="https://bharathikannano.github.io/gitPholio/" target='_blank'>Bharathikannan </a>is waiting for the mock to build this page. Please check back later!</p>
     </div>
   );
 };
